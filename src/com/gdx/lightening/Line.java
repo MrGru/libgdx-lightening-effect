@@ -30,9 +30,9 @@ public class Line {
             int blfn = spriteBatch.getBlendDstFunc();
             spriteBatch.setBlendFunction(spriteBatch.getBlendSrcFunc(), Blending.SourceOver.ordinal());
 
-            spriteBatch.draw(Art.LightningSegment, A.x, A.y, 0,0, getLength(), Thickness, 1,1, theta);
-            spriteBatch.draw(Art.HalfCircle, A.x, A.y, 0,0, scale * Art.HalfCircle.getRegionWidth(), Thickness, 1,1, theta);
-            spriteBatch.draw(Art.HalfCircle2, B.x, B.y, 0,0, scale * Art.HalfCircle2.getRegionWidth(), Thickness, 1,1, theta);
+            spriteBatch.draw(Art.LightningSegment, A.x, A.y, 0,Thickness/2, getLength(), Thickness, 1,1, theta);
+            spriteBatch.draw(Art.HalfCircle, A.x, A.y, 0,Thickness/2, scale * Art.HalfCircle.getRegionWidth(), Thickness, 1,1, theta);
+            spriteBatch.draw(Art.HalfCircle2, B.x, B.y, 0,Thickness/2, scale * Art.HalfCircle2.getRegionWidth(), Thickness, 1,1, theta);
 
             spriteBatch.setColor(prevColor);
             spriteBatch.setBlendFunction(spriteBatch.getBlendSrcFunc(), blfn);
